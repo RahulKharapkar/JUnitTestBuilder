@@ -5,7 +5,7 @@ export const API_CONFIG = {
 } as const;
 
 export const VERSION_OPTIONS = {
-  JUNIT: ['4.x', '5.x', '5.9.2'] as const,
+  JUNIT: ['4.x', '5.x'] as const,
   MOCKITO: ['3.x', '4.x', '5.x'] as const,
 } as const;
 
