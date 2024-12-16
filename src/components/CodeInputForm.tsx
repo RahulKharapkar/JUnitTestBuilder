@@ -1,5 +1,6 @@
 import React from 'react';
 import { CodeInput } from '../types';
+import { SampleDataButton } from './SampleDataButton';
 
 interface CodeInputFormProps {
   input: CodeInput;
@@ -16,6 +17,11 @@ export function CodeInputForm({ input, onInputChange, onSubmit, isLoading }: Cod
 
   return (
     <form onSubmit={(e) => { e.preventDefault(); onSubmit(); }} className="space-y-6">
+      <div className="flex justify-between items-center">
+        <h3 className="text-lg font-bold">Code Details</h3>
+        <SampleDataButton onSelect={onInputChange} />
+      </div>
+
       <div>
         <label className="block text-lg font-bold mb-2">
           Class Name *
@@ -48,7 +54,7 @@ export function CodeInputForm({ input, onInputChange, onSubmit, isLoading }: Cod
           Dependencies (Optional)
         </label>
         <textarea
-          className="w-full neu-input min-h-[100px]"
+          className="w-full neu-input min-h-[100px] font-mono"
           value={input.dependencies.join('\n')}
           onChange={(e) => handleDependencyChange(e.target.value)}
           placeholder="e.g., UserRepository&#10;EmailService"
