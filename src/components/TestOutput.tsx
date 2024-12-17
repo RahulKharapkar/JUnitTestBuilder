@@ -27,18 +27,7 @@ export function TestOutput({ testCases }: TestOutputProps) {
 
   return (
     <div className="space-y-6">
-      {/* AI Disclaimer */}
-      <div className="bg-amber-50 dark:bg-amber-900/20 neu-border p-4 rounded-lg">
-        <div className="flex items-start gap-3">
-          <AlertTriangleIcon className="h-6 w-6 text-amber-600 dark:text-amber-500 flex-shrink-0 mt-1" />
-          <div>
-            <h3 className="font-bold text-amber-800 dark:text-amber-400">AI-Generated Code Disclaimer</h3>
-            <p className="text-amber-700 dark:text-amber-300 mt-1">
-              The test cases below are AI-powered suggestions. Please review, validate, and modify the generated code according to your specific requirements before using in production.
-            </p>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Test Cases */}
       {testCases.map((testCase, index) => (
@@ -68,6 +57,18 @@ export function TestOutput({ testCases }: TestOutputProps) {
           </div>
         </div>
       ))}
+      {/* AI Disclaimer */}
+      <div className="bg-amber-50 dark:bg-amber-900/20 neu-border p-4 rounded-lg">
+        <div className="flex items-start gap-3">
+          <AlertTriangleIcon className="h-6 w-6 text-amber-600 dark:text-amber-500 flex-shrink-0 mt-1" />
+          <div>
+            <h3 className="font-bold text-amber-800 dark:text-amber-400">AI-Generated Code Disclaimer</h3>
+            <p className="text-amber-700 dark:text-amber-300 mt-1">
+              The test cases above are AI-powered suggestions. Please review, validate, and modify the generated code according to your specific requirements before using in production.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
